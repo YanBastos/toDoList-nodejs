@@ -18,4 +18,14 @@ router.get('/:id', (req, res) => {
     res.send(`ID: ${req.params.id}`);
 }) // mostramos que esse get é para um ID
 
+router.put('/:id', (req, res) => {
+    console.log(req.body);
+    res.send(`PUT ID: ${req.params.id}`);
+})
+
+router.delete('/:id', (req, res) => {
+    console.log(req.body);
+    res.send(`DELETE ID: ${req.params.id}`);
+})
+
 module.exports = router; // usamos o exports para exporta a rota
