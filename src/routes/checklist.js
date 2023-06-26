@@ -13,4 +13,9 @@ router.post('/', (req, res) => {
     res.status(200).send(req.body);
 })
 
+router.get('/:id', (req, res) => {
+    console.log(req.params.id);
+    res.send(`ID: ${req.params.id}`);
+}) // mostramos que esse get é para um ID
+
 module.exports = router; // usamos o exports para exporta a rota
